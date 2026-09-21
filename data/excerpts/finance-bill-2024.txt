@@ -1,0 +1,65 @@
+The Finance Bill, 2024
+Kenya Gazette Supplement No. 88 (National Assembly Bills No. 30)
+9th May, 2024
+Source: http://kenyalaw.org/kl/fileadmin/pdfdownloads/Bills/2024/TheFinanceBill_2024.pdf
+
+Bounded excerpt for Brief extraction (levy / VAT / housing / eco / excise). Line breaks collapsed from the published PDF.
+
+--- Motor vehicle tax (new section 12H of the Income Tax Act) ---
+
+9. The Income Tax Act is amended by inserting the following new sections immediately after section 12F—
+
+Motor vehicle tax. 12H. (1) Notwithstanding any other provision of this Act, a tax known as motor vehicle tax shall be payable to the Commissioner on each motor vehicle at the time of the issuance of an insurance cover. (2) Motor vehicle tax shall be payable based on the value of the motor vehicle, at the rate specified in the Third Schedule. Provided that the amount of tax payable— (a) shall not be less than five thousand shillings; and (b) shall not be more than one hundred thousand shillings. (3) The value of a motor vehicle shall be determined on the basis of the make, model, engine capacity in cubic centimetres and year of manufacture of the motor vehicle. (4) An insurer of a motor vehicles shall collect and remit motor vehicle tax within five working days after issuing a motor vehicle insurance cover. (5) An insurer who fails to collect and remit motor vehicle tax shall be liable to pay— (a) a penalty equivalent to fifty per cent of the uncollected tax; and (b) the actual amount of the uncollected tax. (6) Notwithstanding the provisions of this section, motor vehicle tax shall not be payable in respect of an ambulance, or a motor vehicle owned by the national government, county government, Kenya Defence Forces, National Police Service, National Intelligence Service or a person exempt from tax under the Privileges and Immunities Act.
+
+15. The rate of tax in respect of motor vehicle tax charged under section 12H shall be two point five per cent of the value of the motor vehicle.
+
+--- Affordable Housing levy deduction ---
+
+(ad) in the case of an employee, the amount deducted in accordance with section 5(1)(a) of the Affordable Housing Act, 2024;
+
+(ac) contributions made to the Social Health Insurance Fund in accordance with section 27(a) and (b) of the Social Health Insurance Act, 2023;
+
+--- Value Added Tax: bread and other First / Second Schedule deletions ---
+
+34. The First Schedule to the Value Added Tax Act is amended—
+(a) in Part I— (i) in Section A— (A) in the table— (Aa) by deleting tariff number “8802.30.00” and the corresponding description; (Ab) by deleting tariff number “8802.60.00” and the corresponding description; (Ac) by deleting the words “gluten bread” appearing at the end of the table; (Ad) by deleting the words “unleavened bread” appearing at the end of the table;
+
+35. The Second Schedule to the Value Added Tax Act is amended in Part A—
+(a) by deleting paragraph 13A;
+(b) by deleting paragraph 16;
+(c) by deleting paragraph 19;
+(d) by deleting paragraph 21;
+(e) by deleting paragraph 26;
+(f) by deleting paragraph 29;
+(g) by deleting paragraph 30;
+(h) by deleting paragraph 31;
+(i) by deleting paragraph 32;
+(j) by deleting paragraph 33;
+(k) by deleting paragraph 35.
+
+SECOND SCHEDULE [s. 7(2)] ZERO-RATING PART A - ZERO RATED SUPPLIES
+Where the following supplies, excluding hotel accommodation, restaurant or entertainment services where applicable, take place in the course of a registered person’s business, they shall be zero rated in accordance with the provisions of section 7—
+16. All inputs and raw materials whether produced locally or imported, supplied to manufacturers of agricultural pest control products upon recommendation by the Cabinet Secretary for the time being responsible for agriculture.
+19. Agricultural pest control products.
+21. Transportation of sugarcane from farms to milling factories.
+26. Inbound international sea freight offered by a registered person.
+29. The supply of locally assembled and manufactured mobile phones.
+
+--- Excise on money transfer, betting, advertising ---
+
+42. The First Schedule to the Excise Duty Act is amended—
+(b) in Part II—
+(i) in paragraph 1, by deleting the words “fifteen percent” and substituting therefor the words “twenty percent”;
+(ii) in paragraph 2, by deleting the words “fifteen percent” and substituting therefor the words “twenty percent”;
+(iii) in paragraph 3, by deleting the words “fifteen percent” and substituting therefor the words “twenty percent”;
+
+Part II of the First Schedule to the Excise Duty Act (as proposed to be amended) includes:
+1. Telephone and internet data services shall be charged excise duty
+2. Excise duty in fees charged for money transfer services by banks, money transfer agencies and other financial service providers
+3. Excise duty on fees charged for money transfer services by cellular
+
+--- Eco levy ---
+
+45. The Miscellaneous Fees and Levies Act is amended by inserting the following new section immediately after section 7A—
+
+Eco levy. 7B. (1) There shall be paid a levy to be known as the eco levy on the goods specified in the Fourth Schedule manufactured in Kenya or imported into Kenya. (2) The eco levy shall be paid to the Commissioner at the rate specified in the Fourth Schedule— (a) in the case of locally manufactured goods, by the manufacturer at the time the goods are removed from the excise stock room; and (b) in the case of imported goods, by the importer at the time of entering the goods into the country. (3) The purpose of the levy shall be to ensure that the manufacturers and importers of the goods specified in the Fourth Schedule pay for the negative environmental impacts of the goods.

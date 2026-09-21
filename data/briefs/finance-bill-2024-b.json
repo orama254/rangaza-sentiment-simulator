@@ -1,0 +1,53 @@
+{
+  "id": "finance-bill-2024-b",
+  "title": "The Finance Bill, 2024 (variant B)",
+  "source": {
+    "url": "http://kenyalaw.org/kl/fileadmin/pdfdownloads/Bills/2024/TheFinanceBill_2024.pdf",
+    "publisher": "National Assembly of Kenya",
+    "publishedAt": "2024-05-09",
+    "retrievedAt": "2026-09-21"
+  },
+  "jurisdiction": "national",
+  "summary": "Variant B of the Finance Bill 2024 drops motor vehicle tax and VAT on bread, leaving the Affordable Housing levy deduction, eco levy, and higher money-transfer excise.",
+  "provisions": [
+    {
+      "id": "p3",
+      "title": "Affordable Housing levy deduction",
+      "summary": "Treats the amount deducted under section 5(1)(a) of the Affordable Housing Act, 2024 as an allowable deduction for an employee, keeping the payroll housing levy in the tax code.",
+      "whoPays": ["formal employees", "employers who deduct the levy"],
+      "whoBenefits": ["affordable housing programme"],
+      "effectiveDate": null,
+      "enforcement": "Kenya Revenue Authority",
+      "tags": ["payroll_levy"],
+      "sourceExcerpt": "(ad) in the case of an employee, the amount deducted in accordance with section 5(1)(a) of the Affordable Housing Act, 2024;"
+    },
+    {
+      "id": "p4",
+      "title": "Eco levy",
+      "summary": "Creates an eco levy on goods listed in a new Fourth Schedule, paid by Kenyan manufacturers when goods leave the excise stock room and by importers at entry.",
+      "whoPays": [
+        "manufacturers of listed goods",
+        "importers of listed goods"
+      ],
+      "whoBenefits": ["environmental remediation funding"],
+      "effectiveDate": null,
+      "enforcement": "Kenya Revenue Authority",
+      "tags": ["other"],
+      "sourceExcerpt": "Eco levy. 7B. (1) There shall be paid a levy to be known as the eco levy on the goods specified in the Fourth Schedule manufactured in Kenya or imported into Kenya. (2) The eco levy shall be paid to the Commissioner at the rate specified in the Fourth Schedule— (a) in the case of locally manufactured goods, by the manufacturer at the time the goods are removed from the excise stock room; and (b) in the case of imported goods, by the importer at the time of entering the goods into the country."
+    },
+    {
+      "id": "p5",
+      "title": "Excise on money transfer and related fees",
+      "summary": "Raises Part II excise rates, including fees on money transfer services, from fifteen percent to twenty percent.",
+      "whoPays": [
+        "users of bank and cellular money transfer services",
+        "financial service providers collecting the fee"
+      ],
+      "whoBenefits": ["national revenue"],
+      "effectiveDate": null,
+      "enforcement": "Kenya Revenue Authority",
+      "tags": ["mobile_money"],
+      "sourceExcerpt": "(b) in Part II— (i) in paragraph 1, by deleting the words “fifteen percent” and substituting therefor the words “twenty percent”; (ii) in paragraph 2, by deleting the words “fifteen percent” and substituting therefor the words “twenty percent”; (iii) in paragraph 3, by deleting the words “fifteen percent” and substituting therefor the words “twenty percent”;"
+    }
+  ]
+}

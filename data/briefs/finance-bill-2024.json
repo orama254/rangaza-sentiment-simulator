@@ -1,0 +1,78 @@
+{
+  "id": "finance-bill-2024",
+  "title": "The Finance Bill, 2024",
+  "source": {
+    "url": "http://kenyalaw.org/kl/fileadmin/pdfdownloads/Bills/2024/TheFinanceBill_2024.pdf",
+    "publisher": "National Assembly of Kenya",
+    "publishedAt": "2024-05-09",
+    "retrievedAt": "2026-09-21"
+  },
+  "jurisdiction": "national",
+  "summary": "National tax measures in Kenya Gazette Supplement No. 88 (National Assembly Bills No. 30 of 2024), including a motor vehicle tax collected at insurance issuance, removal of VAT relief on bread, continued Affordable Housing payroll deductions, an eco levy on listed goods, and higher excise on money-transfer fees.",
+  "provisions": [
+    {
+      "id": "p1",
+      "title": "Motor vehicle tax",
+      "summary": "A tax on each motor vehicle, collected when an insurance cover is issued, at 2.5 percent of the vehicle's value, with a floor of five thousand shillings and a ceiling of one hundred thousand shillings.",
+      "whoPays": [
+        "motor vehicle owners taking out insurance",
+        "insurers who must collect and remit the tax"
+      ],
+      "whoBenefits": ["national revenue"],
+      "effectiveDate": null,
+      "enforcement": "Kenya Revenue Authority, collected by insurers",
+      "tags": ["fuel", "transport"],
+      "sourceExcerpt": "Motor vehicle tax. 12H. (1) Notwithstanding any other provision of this Act, a tax known as motor vehicle tax shall be payable to the Commissioner on each motor vehicle at the time of the issuance of an insurance cover. (2) Motor vehicle tax shall be payable based on the value of the motor vehicle, at the rate specified in the Third Schedule. Provided that the amount of tax payable— (a) shall not be less than five thousand shillings; and (b) shall not be more than one hundred thousand shillings."
+    },
+    {
+      "id": "p2",
+      "title": "VAT on bread",
+      "summary": "Removes gluten bread and unleavened bread from the VAT exempt table and deletes listed zero-rated Second Schedule items, so staple bread moves onto the standard VAT rate.",
+      "whoPays": ["households buying bread", "bakeries and retailers"],
+      "whoBenefits": ["national revenue"],
+      "effectiveDate": null,
+      "enforcement": "Kenya Revenue Authority",
+      "tags": ["vat_staple"],
+      "sourceExcerpt": "(Ac) by deleting the words “gluten bread” appearing at the end of the table; (Ad) by deleting the words “unleavened bread” appearing at the end of the table;"
+    },
+    {
+      "id": "p3",
+      "title": "Affordable Housing levy deduction",
+      "summary": "Treats the amount deducted under section 5(1)(a) of the Affordable Housing Act, 2024 as an allowable deduction for an employee, keeping the payroll housing levy in the tax code.",
+      "whoPays": ["formal employees", "employers who deduct the levy"],
+      "whoBenefits": ["affordable housing programme"],
+      "effectiveDate": null,
+      "enforcement": "Kenya Revenue Authority",
+      "tags": ["payroll_levy"],
+      "sourceExcerpt": "(ad) in the case of an employee, the amount deducted in accordance with section 5(1)(a) of the Affordable Housing Act, 2024;"
+    },
+    {
+      "id": "p4",
+      "title": "Eco levy",
+      "summary": "Creates an eco levy on goods listed in a new Fourth Schedule, paid by Kenyan manufacturers when goods leave the excise stock room and by importers at entry.",
+      "whoPays": [
+        "manufacturers of listed goods",
+        "importers of listed goods"
+      ],
+      "whoBenefits": ["environmental remediation funding"],
+      "effectiveDate": null,
+      "enforcement": "Kenya Revenue Authority",
+      "tags": ["other"],
+      "sourceExcerpt": "Eco levy. 7B. (1) There shall be paid a levy to be known as the eco levy on the goods specified in the Fourth Schedule manufactured in Kenya or imported into Kenya. (2) The eco levy shall be paid to the Commissioner at the rate specified in the Fourth Schedule— (a) in the case of locally manufactured goods, by the manufacturer at the time the goods are removed from the excise stock room; and (b) in the case of imported goods, by the importer at the time of entering the goods into the country."
+    },
+    {
+      "id": "p5",
+      "title": "Excise on money transfer and related fees",
+      "summary": "Raises Part II excise rates, including fees on money transfer services, from fifteen percent to twenty percent.",
+      "whoPays": [
+        "users of bank and cellular money transfer services",
+        "financial service providers collecting the fee"
+      ],
+      "whoBenefits": ["national revenue"],
+      "effectiveDate": null,
+      "enforcement": "Kenya Revenue Authority",
+      "tags": ["mobile_money"],
+      "sourceExcerpt": "(b) in Part II— (i) in paragraph 1, by deleting the words “fifteen percent” and substituting therefor the words “twenty percent”; (ii) in paragraph 2, by deleting the words “fifteen percent” and substituting therefor the words “twenty percent”; (iii) in paragraph 3, by deleting the words “fifteen percent” and substituting therefor the words “twenty percent”;"
+    }
+  ]
+}

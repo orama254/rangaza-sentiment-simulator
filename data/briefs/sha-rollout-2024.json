@@ -1,0 +1,50 @@
+{
+  "id": "sha-rollout-2024",
+  "title": "Social Health Insurance Act, 2023 (SHA rollout)",
+  "source": {
+    "url": "https://new.kenyalaw.org/akn/ke/act/2023/16/eng@2023-11-24",
+    "publisher": "National Council for Law Reporting",
+    "publishedAt": "2023-11-24",
+    "retrievedAt": "2026-09-21"
+  },
+  "jurisdiction": "national",
+  "summary": "Act No. 16 of 2023 requires every Kenyan to register with the Social Health Insurance Fund, sets household and employer contributions, and conditions healthcare access on up-to-date contributions. Operational rollout from 1 October 2024 is in the 2024 Regulations.",
+  "provisions": [
+    {
+      "id": "p1",
+      "title": "Mandatory SHA registration",
+      "summary": "Every Kenyan must register as a member of the Social Health Insurance Fund. Proof of registration and contribution is a precondition for accessing public services.",
+      "whoPays": ["every Kenyan", "non-Kenyan residents who register"],
+      "whoBenefits": ["Social Health Insurance Fund members"],
+      "effectiveDate": null,
+      "enforcement": "Social Health Authority",
+      "tags": ["health_access"],
+      "sourceExcerpt": "(1)Every Kenyan shall register as a member of the Social Health Insurance Fund.(2)A person who, being a non-Kenyan, and is ordinarily resident in Kenya, shall be eligible for registration as a member of the Social Health Insurance Fund.(5)Any person who is registerable as a member under this Act shall produce proof of compliance with the provisions of this Act on registration and contribution as a precondition of dealing with or accessing public services from the national government, county government or a national or county government entities."
+    },
+    {
+      "id": "p2",
+      "title": "Household and employer contributions",
+      "summary": "Salaried households pay by monthly payroll deduction. Non-salaried households pay an annual contribution set by means testing. Contributions are due at registration.",
+      "whoPays": [
+        "salaried employees and their employers",
+        "non-salaried households"
+      ],
+      "whoBenefits": ["Social Health Insurance Fund"],
+      "effectiveDate": null,
+      "enforcement": "Social Health Authority and employers",
+      "tags": ["health_levy", "payroll_levy"],
+      "sourceExcerpt": "(2)Contributions under this Act shall be paid as follows—(a)in the case of a household whose income is derived from salaried employment, by a monthly statutory deduction from the wages or salary by the employer at a rate prescribed under this Act;(b)in the case of a household whose income is not derived from salaried employment, by an annual contribution of a proportion of household income as determined by the means testing instrument in the manner prescribed under this Act;Provided that the contributions under this section shall be paid at the time of registration."
+    },
+    {
+      "id": "p3",
+      "title": "Access only with active contributions",
+      "summary": "A person may access healthcare under the Act only while Social Health Insurance Fund contributions are up to date and active. Late payment attracts a two percent penalty.",
+      "whoPays": ["contributors who fall into arrears"],
+      "whoBenefits": ["the Fund"],
+      "effectiveDate": null,
+      "enforcement": "Social Health Authority",
+      "tags": ["health_access"],
+      "sourceExcerpt": "(4)A person shall only access healthcare services under this Act where their contributions to the Social Health Insurance Fund are up to date and active.(6)Any person who fails to pay any contribution in respect of any period on or before the day on which payment is due shall be liable to a penalty equal to two percent of the amount due for contribution for the period which the contribution remains unpaid and the total annual contributions."
+    }
+  ]
+}

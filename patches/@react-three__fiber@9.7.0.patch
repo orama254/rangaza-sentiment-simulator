@@ -1,0 +1,311 @@
+diff --git a/dist/declarations/src/core/store.d.ts b/dist/declarations/src/core/store.d.ts
+index 0e69589cb283f963b2eb9f033dfecefdfa0460c7..04d1621516990720dc469425e7b30eb7016d1c74 100644
+--- a/dist/declarations/src/core/store.d.ts
++++ b/dist/declarations/src/core/store.d.ts
+@@ -80,8 +80,25 @@ export interface RootState {
+     scene: THREE.Scene;
+     /** Default raycaster */
+     raycaster: THREE.Raycaster;
+-    /** Default clock */
+-    clock: THREE.Clock;
++    /** Simulation timer. Advanced once per frame via `update(timestamp)`. */
++    timer: THREE.Timer;
++    /**
++     * Timer-backed stand-in for the removed `THREE.Clock`.
++     * Still exposes `elapsedTime`, `getDelta()`, `getElapsedTime()`, `start()`, and `stop()`.
++     * Prefer `timer`.
++     */
++    clock: {
++        autoStart: boolean;
++        startTime: number;
++        oldTime: number;
++        elapsedTime: number;
++        running: boolean;
++        timer: THREE.Timer;
++        start: () => void;
++        stop: () => void;
++        getElapsedTime: () => number;
++        getDelta: () => number;
++    };
+     /** Event layer interface, contains the event handler and the node they're connected to */
+     events: EventManager<any>;
+     /** XR interface */
+diff --git a/dist/events-156d8d12.esm.js b/dist/events-156d8d12.esm.js
+index 9681d0c62238d67f2d5ad389307dfd45ee8ba7ba..4939dbbeb9912a01b7b08ac3f3189c2b203d85c3 100644
+--- a/dist/events-156d8d12.esm.js
++++ b/dist/events-156d8d12.esm.js
+@@ -985,6 +985,44 @@ const createStore = (invalidate, advance) => {
+         };
+       }
+     }
++    function createFiberClock() {
++      const timer = new THREE.Timer();
++      if (typeof document !== "undefined") timer.connect(document);
++      return {
++        autoStart: true,
++        startTime: 0,
++        oldTime: 0,
++        elapsedTime: 0,
++        running: false,
++        timer,
++        start() {
++          timer.reset();
++          // Timer has no public elapsed reset; zero it so setFrameloop matches Clock.
++          timer._elapsed = 0;
++          this.startTime = performance.now();
++          this.oldTime = this.startTime;
++          this.elapsedTime = 0;
++          this.running = true;
++          this.autoStart = true;
++        },
++        stop() {
++          this.elapsedTime = timer.getElapsed();
++          this.running = false;
++          this.autoStart = false;
++        },
++        getElapsedTime() {
++          return this.running ? timer.getElapsed() : this.elapsedTime;
++        },
++        getDelta() {
++          if (this.autoStart && !this.running) {
++            this.start();
++            return 0;
++          }
++          if (!this.running) return 0;
++          return timer.getDelta();
++        }
++      };
++    }
+     let performanceTimeout = undefined;
+     const setPerformanceCurrent = current => set(state => ({
+       performance: {
+@@ -1013,7 +1051,13 @@ const createStore = (invalidate, advance) => {
+       linear: false,
+       flat: false,
+       controls: null,
+-      clock: new THREE.Clock(),
++      ...(() => {
++        const clock = createFiberClock();
++        return {
++          clock,
++          timer: clock.timer
++        };
++      })(),
+       pointer,
+       mouse: pointer,
+       frameloop: 'always',
+@@ -16151,13 +16195,24 @@ let subscribers;
+ let subscription;
+ function update(timestamp, state, frame) {
+   // Run local effects
+-  let delta = state.clock.getDelta();
++  const clock = state.clock;
++  let delta;
+ 
+   // In frameloop='never' mode, clock times are updated using the provided timestamp
+   if (state.frameloop === 'never' && typeof timestamp === 'number') {
+-    delta = timestamp - state.clock.elapsedTime;
+-    state.clock.oldTime = state.clock.elapsedTime;
+-    state.clock.elapsedTime = timestamp;
++    delta = timestamp - clock.elapsedTime;
++    clock.oldTime = clock.elapsedTime;
++    clock.elapsedTime = timestamp;
++  } else if (clock.autoStart && !clock.running) {
++    clock.start();
++    delta = 0;
++  } else if (!clock.running) {
++    delta = 0;
++  } else {
++    clock.timer.update(timestamp);
++    delta = clock.timer.getDelta();
++    clock.elapsedTime = clock.timer.getElapsed();
++    clock.oldTime = performance.now();
+   }
+ 
+   // Call subscribers (useFrame)
+diff --git a/dist/events-4c71f21f.cjs.prod.js b/dist/events-4c71f21f.cjs.prod.js
+index 65e702ef67d954387307b168529752690a586fd0..2c6f9008d9f4100eafb8cafad6844d338c327e04 100644
+--- a/dist/events-4c71f21f.cjs.prod.js
++++ b/dist/events-4c71f21f.cjs.prod.js
+@@ -1010,6 +1010,44 @@ const createStore = (invalidate, advance) => {
+         };
+       }
+     }
++    function createFiberClock() {
++      const timer = new THREE__namespace.Timer();
++      if (typeof document !== "undefined") timer.connect(document);
++      return {
++        autoStart: true,
++        startTime: 0,
++        oldTime: 0,
++        elapsedTime: 0,
++        running: false,
++        timer,
++        start() {
++          timer.reset();
++          // Timer has no public elapsed reset; zero it so setFrameloop matches Clock.
++          timer._elapsed = 0;
++          this.startTime = performance.now();
++          this.oldTime = this.startTime;
++          this.elapsedTime = 0;
++          this.running = true;
++          this.autoStart = true;
++        },
++        stop() {
++          this.elapsedTime = timer.getElapsed();
++          this.running = false;
++          this.autoStart = false;
++        },
++        getElapsedTime() {
++          return this.running ? timer.getElapsed() : this.elapsedTime;
++        },
++        getDelta() {
++          if (this.autoStart && !this.running) {
++            this.start();
++            return 0;
++          }
++          if (!this.running) return 0;
++          return timer.getDelta();
++        }
++      };
++    }
+     let performanceTimeout = undefined;
+     const setPerformanceCurrent = current => set(state => ({
+       performance: {
+@@ -1038,7 +1076,13 @@ const createStore = (invalidate, advance) => {
+       linear: false,
+       flat: false,
+       controls: null,
+-      clock: new THREE__namespace.Clock(),
++      ...(() => {
++        const clock = createFiberClock();
++        return {
++          clock,
++          timer: clock.timer
++        };
++      })(),
+       pointer,
+       mouse: pointer,
+       frameloop: 'always',
+@@ -7979,13 +8023,24 @@ let subscribers;
+ let subscription;
+ function update(timestamp, state, frame) {
+   // Run local effects
+-  let delta = state.clock.getDelta();
++  const clock = state.clock;
++  let delta;
+ 
+   // In frameloop='never' mode, clock times are updated using the provided timestamp
+   if (state.frameloop === 'never' && typeof timestamp === 'number') {
+-    delta = timestamp - state.clock.elapsedTime;
+-    state.clock.oldTime = state.clock.elapsedTime;
+-    state.clock.elapsedTime = timestamp;
++    delta = timestamp - clock.elapsedTime;
++    clock.oldTime = clock.elapsedTime;
++    clock.elapsedTime = timestamp;
++  } else if (clock.autoStart && !clock.running) {
++    clock.start();
++    delta = 0;
++  } else if (!clock.running) {
++    delta = 0;
++  } else {
++    clock.timer.update(timestamp);
++    delta = clock.timer.getDelta();
++    clock.elapsedTime = clock.timer.getElapsed();
++    clock.oldTime = performance.now();
+   }
+ 
+   // Call subscribers (useFrame)
+diff --git a/dist/events-b1bdeb1a.cjs.dev.js b/dist/events-b1bdeb1a.cjs.dev.js
+index 7785529f79299cdefe706c0df1d5c756817ca274..c7599c6d47cc35dbfc8b809793c187baa7809a4b 100644
+--- a/dist/events-b1bdeb1a.cjs.dev.js
++++ b/dist/events-b1bdeb1a.cjs.dev.js
+@@ -1010,6 +1010,44 @@ const createStore = (invalidate, advance) => {
+         };
+       }
+     }
++    function createFiberClock() {
++      const timer = new THREE__namespace.Timer();
++      if (typeof document !== "undefined") timer.connect(document);
++      return {
++        autoStart: true,
++        startTime: 0,
++        oldTime: 0,
++        elapsedTime: 0,
++        running: false,
++        timer,
++        start() {
++          timer.reset();
++          // Timer has no public elapsed reset; zero it so setFrameloop matches Clock.
++          timer._elapsed = 0;
++          this.startTime = performance.now();
++          this.oldTime = this.startTime;
++          this.elapsedTime = 0;
++          this.running = true;
++          this.autoStart = true;
++        },
++        stop() {
++          this.elapsedTime = timer.getElapsed();
++          this.running = false;
++          this.autoStart = false;
++        },
++        getElapsedTime() {
++          return this.running ? timer.getElapsed() : this.elapsedTime;
++        },
++        getDelta() {
++          if (this.autoStart && !this.running) {
++            this.start();
++            return 0;
++          }
++          if (!this.running) return 0;
++          return timer.getDelta();
++        }
++      };
++    }
+     let performanceTimeout = undefined;
+     const setPerformanceCurrent = current => set(state => ({
+       performance: {
+@@ -1038,7 +1076,13 @@ const createStore = (invalidate, advance) => {
+       linear: false,
+       flat: false,
+       controls: null,
+-      clock: new THREE__namespace.Clock(),
++      ...(() => {
++        const clock = createFiberClock();
++        return {
++          clock,
++          timer: clock.timer
++        };
++      })(),
+       pointer,
+       mouse: pointer,
+       frameloop: 'always',
+@@ -16176,13 +16220,24 @@ let subscribers;
+ let subscription;
+ function update(timestamp, state, frame) {
+   // Run local effects
+-  let delta = state.clock.getDelta();
++  const clock = state.clock;
++  let delta;
+ 
+   // In frameloop='never' mode, clock times are updated using the provided timestamp
+   if (state.frameloop === 'never' && typeof timestamp === 'number') {
+-    delta = timestamp - state.clock.elapsedTime;
+-    state.clock.oldTime = state.clock.elapsedTime;
+-    state.clock.elapsedTime = timestamp;
++    delta = timestamp - clock.elapsedTime;
++    clock.oldTime = clock.elapsedTime;
++    clock.elapsedTime = timestamp;
++  } else if (clock.autoStart && !clock.running) {
++    clock.start();
++    delta = 0;
++  } else if (!clock.running) {
++    delta = 0;
++  } else {
++    clock.timer.update(timestamp);
++    delta = clock.timer.getDelta();
++    clock.elapsedTime = clock.timer.getElapsed();
++    clock.oldTime = performance.now();
+   }
+ 
+   // Call subscribers (useFrame)

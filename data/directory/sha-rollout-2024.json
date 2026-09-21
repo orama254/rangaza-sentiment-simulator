@@ -1,0 +1,41 @@
+[
+  {
+    "id": "ussd-147",
+    "action": "Dial *147# on a Kenyan mobile line to start or check Social Health Authority registration.",
+    "where": "Any Safaricom, Airtel, or Telkom handset",
+    "contact": "*147#",
+    "documents": ["National ID number"],
+    "sourceUrl": "https://sha.go.ke/",
+    "lastVerified": "2026-09-21"
+  },
+  {
+    "id": "afya-yangu",
+    "action": "Register or manage a SHA household on the Afya Yangu portal.",
+    "where": "https://afyayangu.go.ke",
+    "contact": "Afya Yangu portal help on afyayangu.go.ke",
+    "documents": [
+      "National ID",
+      "Phone number"
+    ],
+    "sourceUrl": "https://afyayangu.go.ke/",
+    "lastVerified": "2026-09-21"
+  },
+  {
+    "id": "sha-portal",
+    "action": "Read SHA member guidance and facility lists on the Social Health Authority site.",
+    "where": "https://sha.go.ke",
+    "contact": "Social Health Authority via sha.go.ke",
+    "documents": [],
+    "sourceUrl": "https://sha.go.ke/",
+    "lastVerified": "2026-09-21"
+  },
+  {
+    "id": "huduma-sha",
+    "action": "Register for SHA in person at a Huduma Centre if USSD or the portal is not usable.",
+    "where": "Any Huduma Centre",
+    "contact": "Huduma Kenya via huduma.go.ke",
+    "documents": ["National ID", "Dependents' birth certificates if registering a household"],
+    "sourceUrl": "https://www.huduma.go.ke/",
+    "lastVerified": "2026-09-21"
+  }
+]

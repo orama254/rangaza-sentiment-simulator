@@ -1,0 +1,44 @@
+[
+  {
+    "id": "parliament-memorandum",
+    "action": "Submit a written memorandum on the Finance Bill to the National Assembly during public participation.",
+    "where": "Clerk of the National Assembly, Parliament Buildings, Nairobi, or the public participation portal announced with the Bill.",
+    "contact": "National Assembly public participation desk via parliament.go.ke",
+    "documents": [
+      "National ID",
+      "Written memorandum stating the clause objected to or supported"
+    ],
+    "sourceUrl": "https://www.parliament.go.ke/",
+    "lastVerified": "2026-09-21"
+  },
+  {
+    "id": "kenya-law-bill",
+    "action": "Read the published Finance Bill, 2024 on Kenya Law.",
+    "where": "Kenya Law Bills 2024 collection",
+    "contact": "Kenya Law, National Council for Law Reporting",
+    "documents": [],
+    "sourceUrl": "http://kenyalaw.org/kl/fileadmin/pdfdownloads/Bills/2024/TheFinanceBill_2024.pdf",
+    "lastVerified": "2026-09-21"
+  },
+  {
+    "id": "kra-itax",
+    "action": "Check current tax obligations and file returns on iTax.",
+    "where": "iTax online, or a Huduma Centre KRA booth",
+    "contact": "KRA Contact Centre 020 4 999 999 / 0711 099 999",
+    "documents": [
+      "KRA PIN",
+      "National ID"
+    ],
+    "sourceUrl": "https://itax.kra.go.ke/",
+    "lastVerified": "2026-09-21"
+  },
+  {
+    "id": "huduma-centre",
+    "action": "Visit a Huduma Centre for help with KRA PIN, iTax, or National ID needed to follow the Bill.",
+    "where": "Any Huduma Centre",
+    "contact": "Huduma Kenya via huduma.go.ke",
+    "documents": ["National ID"],
+    "sourceUrl": "https://www.huduma.go.ke/",
+    "lastVerified": "2026-09-21"
+  }
+]

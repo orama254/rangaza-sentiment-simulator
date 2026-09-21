@@ -1,0 +1,525 @@
+[
+  {
+    "id": "baringo",
+    "name": "Baringo",
+    "aliases": [
+      "Baringo"
+    ],
+    "centroid": [
+      35.94033,
+      0.67642
+    ]
+  },
+  {
+    "id": "bomet",
+    "name": "Bomet",
+    "aliases": [
+      "Bomet"
+    ],
+    "centroid": [
+      35.28134,
+      -0.69151
+    ]
+  },
+  {
+    "id": "bungoma",
+    "name": "Bungoma",
+    "aliases": [
+      "Bungoma"
+    ],
+    "centroid": [
+      34.63921,
+      0.75132
+    ]
+  },
+  {
+    "id": "busia",
+    "name": "Busia",
+    "aliases": [
+      "Busia"
+    ],
+    "centroid": [
+      34.19381,
+      0.38995
+    ]
+  },
+  {
+    "id": "elgeyo-marakwet",
+    "name": "Elgeyo-Marakwet",
+    "aliases": [
+      "Elgeyo-Marakwet",
+      "Elgeyo/Marakwet"
+    ],
+    "centroid": [
+      35.53639,
+      0.79953
+    ]
+  },
+  {
+    "id": "embu",
+    "name": "Embu",
+    "aliases": [
+      "Embu"
+    ],
+    "centroid": [
+      37.62515,
+      -0.60133
+    ]
+  },
+  {
+    "id": "garissa",
+    "name": "Garissa",
+    "aliases": [
+      "Garissa"
+    ],
+    "centroid": [
+      40.18072,
+      -0.48828
+    ]
+  },
+  {
+    "id": "homa-bay",
+    "name": "Homa Bay",
+    "aliases": [
+      "Homa Bay"
+    ],
+    "centroid": [
+      34.36036,
+      -0.541
+    ]
+  },
+  {
+    "id": "isiolo",
+    "name": "Isiolo",
+    "aliases": [
+      "Isiolo"
+    ],
+    "centroid": [
+      38.53908,
+      1.01185
+    ]
+  },
+  {
+    "id": "kajiado",
+    "name": "Kajiado",
+    "aliases": [
+      "Kajiado"
+    ],
+    "centroid": [
+      36.9089,
+      -2.12058
+    ]
+  },
+  {
+    "id": "kakamega",
+    "name": "Kakamega",
+    "aliases": [
+      "Kakamega"
+    ],
+    "centroid": [
+      34.74398,
+      0.40547
+    ]
+  },
+  {
+    "id": "kericho",
+    "name": "Kericho",
+    "aliases": [
+      "Kericho"
+    ],
+    "centroid": [
+      35.33663,
+      -0.24373
+    ]
+  },
+  {
+    "id": "kiambu",
+    "name": "Kiambu",
+    "aliases": [
+      "Kiambu"
+    ],
+    "centroid": [
+      36.81968,
+      -1.06675
+    ]
+  },
+  {
+    "id": "kilifi",
+    "name": "Kilifi",
+    "aliases": [
+      "Kilifi"
+    ],
+    "centroid": [
+      39.68322,
+      -3.1731
+    ]
+  },
+  {
+    "id": "kirinyaga",
+    "name": "Kirinyaga",
+    "aliases": [
+      "Kirinyaga"
+    ],
+    "centroid": [
+      37.31862,
+      -0.52229
+    ]
+  },
+  {
+    "id": "kisii",
+    "name": "Kisii",
+    "aliases": [
+      "Kisii"
+    ],
+    "centroid": [
+      34.77614,
+      -0.77313
+    ]
+  },
+  {
+    "id": "kisumu",
+    "name": "Kisumu",
+    "aliases": [
+      "Kisumu"
+    ],
+    "centroid": [
+      34.83464,
+      -0.16841
+    ]
+  },
+  {
+    "id": "kitui",
+    "name": "Kitui",
+    "aliases": [
+      "Kitui"
+    ],
+    "centroid": [
+      38.40578,
+      -1.48567
+    ]
+  },
+  {
+    "id": "kwale",
+    "name": "Kwale",
+    "aliases": [
+      "Kwale"
+    ],
+    "centroid": [
+      39.15151,
+      -4.13897
+    ]
+  },
+  {
+    "id": "laikipia",
+    "name": "Laikipia",
+    "aliases": [
+      "Laikipia"
+    ],
+    "centroid": [
+      36.76252,
+      0.32386
+    ]
+  },
+  {
+    "id": "lamu",
+    "name": "Lamu",
+    "aliases": [
+      "Lamu"
+    ],
+    "centroid": [
+      40.76626,
+      -2.03963
+    ]
+  },
+  {
+    "id": "machakos",
+    "name": "Machakos",
+    "aliases": [
+      "Machakos"
+    ],
+    "centroid": [
+      37.40572,
+      -1.28981
+    ]
+  },
+  {
+    "id": "makueni",
+    "name": "Makueni",
+    "aliases": [
+      "Makueni"
+    ],
+    "centroid": [
+      37.7996,
+      -2.16616
+    ]
+  },
+  {
+    "id": "mandera",
+    "name": "Mandera",
+    "aliases": [
+      "Mandera"
+    ],
+    "centroid": [
+      40.73676,
+      3.43836
+    ]
+  },
+  {
+    "id": "marsabit",
+    "name": "Marsabit",
+    "aliases": [
+      "Marsabit"
+    ],
+    "centroid": [
+      37.56839,
+      2.98031
+    ]
+  },
+  {
+    "id": "meru",
+    "name": "Meru",
+    "aliases": [
+      "Meru"
+    ],
+    "centroid": [
+      37.76014,
+      0.17172
+    ]
+  },
+  {
+    "id": "migori",
+    "name": "Migori",
+    "aliases": [
+      "Migori"
+    ],
+    "centroid": [
+      34.36383,
+      -0.9904
+    ]
+  },
+  {
+    "id": "mombasa",
+    "name": "Mombasa",
+    "aliases": [
+      "Mombasa"
+    ],
+    "centroid": [
+      39.65471,
+      -4.01767
+    ]
+  },
+  {
+    "id": "murang-a",
+    "name": "Murang'a",
+    "aliases": [
+      "Murang'a",
+      "Muranga"
+    ],
+    "centroid": [
+      37.03112,
+      -0.80886
+    ]
+  },
+  {
+    "id": "nairobi",
+    "name": "Nairobi",
+    "aliases": [
+      "Nairobi",
+      "Nairobi City"
+    ],
+    "centroid": [
+      36.86441,
+      -1.29275
+    ]
+  },
+  {
+    "id": "nakuru",
+    "name": "Nakuru",
+    "aliases": [
+      "Nakuru"
+    ],
+    "centroid": [
+      36.07632,
+      -0.46401
+    ]
+  },
+  {
+    "id": "nandi",
+    "name": "Nandi",
+    "aliases": [
+      "Nandi"
+    ],
+    "centroid": [
+      35.11235,
+      0.18541
+    ]
+  },
+  {
+    "id": "narok",
+    "name": "Narok",
+    "aliases": [
+      "Narok"
+    ],
+    "centroid": [
+      35.57534,
+      -1.25397
+    ]
+  },
+  {
+    "id": "nyamira",
+    "name": "Nyamira",
+    "aliases": [
+      "Nyamira"
+    ],
+    "centroid": [
+      34.96482,
+      -0.6424
+    ]
+  },
+  {
+    "id": "nyandarua",
+    "name": "Nyandarua",
+    "aliases": [
+      "Nyandarua"
+    ],
+    "centroid": [
+      36.47792,
+      -0.31805
+    ]
+  },
+  {
+    "id": "nyeri",
+    "name": "Nyeri",
+    "aliases": [
+      "Nyeri"
+    ],
+    "centroid": [
+      36.9538,
+      -0.34308
+    ]
+  },
+  {
+    "id": "samburu",
+    "name": "Samburu",
+    "aliases": [
+      "Samburu"
+    ],
+    "centroid": [
+      37.11682,
+      1.31978
+    ]
+  },
+  {
+    "id": "siaya",
+    "name": "Siaya",
+    "aliases": [
+      "Siaya"
+    ],
+    "centroid": [
+      34.24721,
+      -0.05844
+    ]
+  },
+  {
+    "id": "taita-taveta",
+    "name": "Taita-Taveta",
+    "aliases": [
+      "Taita-Taveta",
+      "Taita Taveta",
+      "Taita/Taveta"
+    ],
+    "centroid": [
+      38.41803,
+      -3.43244
+    ]
+  },
+  {
+    "id": "tana-river",
+    "name": "Tana River",
+    "aliases": [
+      "Tana River"
+    ],
+    "centroid": [
+      39.41211,
+      -1.55696
+    ]
+  },
+  {
+    "id": "tharaka-nithi",
+    "name": "Tharaka-Nithi",
+    "aliases": [
+      "Tharaka-Nithi",
+      "Tharaka"
+    ],
+    "centroid": [
+      37.8717,
+      -0.19903
+    ]
+  },
+  {
+    "id": "trans-nzoia",
+    "name": "Trans Nzoia",
+    "aliases": [
+      "Trans Nzoia"
+    ],
+    "centroid": [
+      34.95711,
+      1.05182
+    ]
+  },
+  {
+    "id": "turkana",
+    "name": "Turkana",
+    "aliases": [
+      "Turkana"
+    ],
+    "centroid": [
+      35.43548,
+      3.41213
+    ]
+  },
+  {
+    "id": "uasin-gishu",
+    "name": "Uasin Gishu",
+    "aliases": [
+      "Uasin Gishu"
+    ],
+    "centroid": [
+      35.31858,
+      0.53206
+    ]
+  },
+  {
+    "id": "vihiga",
+    "name": "Vihiga",
+    "aliases": [
+      "Vihiga"
+    ],
+    "centroid": [
+      34.72189,
+      0.07822
+    ]
+  },
+  {
+    "id": "wajir",
+    "name": "Wajir",
+    "aliases": [
+      "Wajir"
+    ],
+    "centroid": [
+      40.03375,
+      1.80952
+    ]
+  },
+  {
+    "id": "west-pokot",
+    "name": "West Pokot",
+    "aliases": [
+      "West Pokot"
+    ],
+    "centroid": [
+      35.24309,
+      1.72726
+    ]
+  }
+]

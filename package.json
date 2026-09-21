@@ -6,21 +6,42 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "generate:population": "tsx scripts/generate-population.ts",
+    "react:sample": "tsx scripts/react-sample.ts",
+    "verify:cp3": "tsx scripts/verify-checkpoint-3.ts",
+    "verify:scoring": "tsx scripts/verify-scoring.ts",
+    "verify:simulate": "tsx scripts/verify-simulate.ts"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^4.0.58",
+    "@ai-sdk/google": "^4.0.76",
+    "@ai-sdk/openai": "^4.0.71",
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.7.0",
+    "@typesafe-ai/sdk": "^0.6.0",
+    "ai": "^7.0.107",
+    "d3-geo": "^3.1.1",
+    "gsap": "^3.15.0",
     "next": "16.3.5",
+    "p-limit": "^7.3.3",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "three": "^0.186.0",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/d3-geo": "^3.1.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "^0.186.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.5",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   },
   "packageManager": "pnpm@12.5.1"
