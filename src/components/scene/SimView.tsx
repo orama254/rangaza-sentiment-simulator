@@ -30,11 +30,16 @@ type SimulateEvent = {
   message?: string;
 };
 
-async function readSimulate(briefId: string, onEvent: (event: SimulateEvent) => void) {
+async function readSimulate(
+  briefId: string,
+  onEvent: (event: SimulateEvent) => void,
+  signal: AbortSignal,
+) {
   const response = await fetch("/api/simulate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ briefId }),
+    signal,
   });
   if (!response.body) {
     throw new Error("simulate stream missing body");
@@ -86,18 +91,21 @@ export function SimView({
   const [rippleRadius, setRippleRadius] = useState(0);
   const [announceProgress, setAnnounceProgress] = useState(0);
   const [error, setError] = useState<string | null>(null);
+  const [revealed, setRevealed] = useState(false);
   const skipRef = useRef(false);
+  const revealedRef = useRef(false);
+  const visiblePulses = revealed ? pulses : [];
 
   const pulseMap = useMemo(() => {
     const map = new Map<string, CountyPulse>();
-    for (const pulse of pulses) {
+    for (const pulse of visiblePulses) {
       map.set(pulse.countyId, pulse);
     }
     return map;
-  }, [pulses]);
+  }, [visiblePulses]);
 
   const load = useCallback(
-    async (briefId: string) => {
+    async (briefId: string, signal: AbortSignal) => {
       const nextPulses: CountyPulse[] = [];
       const nextReactions = new Map<string, SceneReaction>();
       await readSimulate(briefId, (event) => {
@@ -122,25 +130,32 @@ export function SimView({
         if (event.type === "complete" && event.pulses) {
           setPulses(event.pulses);
         }
-      });
+      }, signal);
     },
     [],
   );
 
   useEffect(() => {
     const briefId = variant === "a" ? briefA.id : briefB.id;
+    const controller = new AbortController();
     setPulses([]);
     setReactions(new Map());
-    setAnnounceProgress(0);
+    setAnnounceProgress(revealedRef.current ? 1 : 0);
     setRippleRadius(0);
     setError(null);
-    load(briefId).catch((cause: unknown) => {
+    load(briefId, controller.signal).catch((cause: unknown) => {
+      if (cause instanceof DOMException && cause.name === "AbortError") {
+        return;
+      }
       setError(cause instanceof Error ? cause.message : String(cause));
     });
+    return () => controller.abort();
   }, [briefA.id, briefB.id, load, variant]);
 
   const skip = useCallback(() => {
     skipRef.current = true;
+    revealedRef.current = true;
+    setRevealed(true);
     setRippleRadius(120);
     setAnnounceProgress(1);
     setAnnouncing(false);
@@ -148,6 +163,8 @@ export function SimView({
 
   const announce = useCallback(() => {
     skipRef.current = false;
+    revealedRef.current = true;
+    setRevealed(true);
     setAnnouncing(true);
     setRippleRadius(0);
     setAnnounceProgress(0);
@@ -211,8 +228,8 @@ export function SimView({
                 {error}
               </p>
             ) : null}
-            <HotspotList pulses={pulses} selected={selected} onSelect={setSelected} />
-            {pulses.length > 0 ? (
+            <HotspotList pulses={visiblePulses} selected={selected} onSelect={setSelected} />
+            {visiblePulses.length > 0 ? (
               <label className="text-sm">
                 County
                 <select
@@ -225,7 +242,7 @@ export function SimView({
                   }}
                 >
                   <option value="">Click a County on the map</option>
-                  {[...pulses]
+                  {[...visiblePulses]
                     .sort((a, b) => a.countyId.localeCompare(b.countyId))
                     .map((pulse) => (
                       <option key={pulse.countyId} value={pulse.countyId}>

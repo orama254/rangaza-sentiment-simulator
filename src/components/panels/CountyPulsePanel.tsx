@@ -51,7 +51,7 @@ export function CountyPulsePanel({
         </ul>
         {pulse.livelihoods.length > 0 ? (
           <ul className="mt-2 space-y-1 text-xs">
-            {pulse.livelihoods.slice(0, 4).map((row) => (
+            {pulse.livelihoods.map((row) => (
               <li key={row.livelihood} className="flex justify-between gap-2">
                 <span className="capitalize">
                   {row.livelihood.replaceAll("_", " ")}
